@@ -1,0 +1,157 @@
+{
+  // Unique ID for this custom item
+  "69c6968b2758d2dcba017075": {
+    // The vanilla Tarkov template ID of the item it's copying properties from (e.g., another belt or container)
+    "itemTplToClone": "66572c82ad599021091c6118",
+
+    // The parent category ID in the game’s item database, controls where it appears in the item tree
+    "parentId": "57864a3d24597754843f8721",
+
+    // The parent category in the handbook (for sorting/grouping in the UI for FleaMarket)
+    "handbookParentId": "5b47574386f77428ca22b2f1",
+
+    // Properties that will override what the "itemTplToClone" has by default
+    "overrideProperties": {
+      // Make this item examined (visible) by default in the player's inventory
+      "ExaminedByDefault": true,
+
+      // Asset prefab for this item: what 3D model and icon the game should use
+      "Prefab": {
+        // Path to the AssetBundle file for the item
+        "path": "assets/duck/super_cute_duck.bundle",
+        "rcid": ""
+      },
+
+      // Inventory size: 2x2 grid spaces
+      "Width": 2,
+      "Height": 2,
+
+      // How much it weighs (kg)
+      "Weight": 2.00,
+
+      // The grid ("container slots") inside the item where you can put other things
+      "Grids":[]
+    },
+
+    // How the item will appear in different languages ("locales")
+    "locales": {
+      "en": {
+        "name": "duck",
+        "shortName": "duck",
+        "description": "a cool ass duck!"
+      }
+    },
+
+    // Price it will go for on the flea market (in roubles)
+    "fleaPriceRoubles": 500000,
+
+    // Price in the handbook
+    "handbookPriceRoubles": 500000,
+
+
+
+    // Should it go in the hideout poster slots?
+    "addtoHideoutPosterSlots": false,
+
+    // Should it be visible on posters/maps?  
+    "addPosterToMaps": false,
+
+    // How likely it is to appear as a map poster
+    "posterSpawnProbability": 10,
+
+    // Should it be available in statuette display slots in hideout?
+    "addtoStatuetteSlots": false,
+
+    // (IF YOU ARE MAKING AMMO)Should it add ammo calibers to all clone locations?
+    "addCaliberToAllCloneLocations": false,
+
+    // Should be included in static ammo tables (for spawns)
+    "addtoStaticAmmo": false,
+
+    // Chance of spawning as static ammo
+    "staticAmmoProbability": 5,
+
+    // Should it be available to bots/loadouts? (NOTE - THIS WILL PUSH TO BOT LOOT TABLES AT THE SAME PROBABILITY AS THE ITEM YOU'RE CLONING IF THAT BOT HAS THAT ITEM IN IT'S LOOT TABLE)
+    "addtoBots": false,
+
+    // Should it be pushed to special slots
+    "addtoSpecialSlots": false,
+
+    // Should it be pushed to anywhere the cloned item is allowed to go
+    "addtoModSlots": false,
+
+    // What specific modSlot(s) to search for the cloned item ID and add yours to
+    "modSlot": ["mod_muzzle"],
+
+    // Should it be available as a Hall of Fame item?
+    "addtoHallOfFame": true,
+
+    // What hall of fame "slots"/categories this can go in
+    "hallOfFameSlots": [
+      "bigTrophies",
+      "smallTrophies",
+      "dogTags"
+    ],
+
+    // Can it be used as generator fuel in hideout?
+    "addtoGeneratorAsFuel": false,
+
+    // What stages of the generator it can be used in
+    "generatorFuelSlotStages": [
+      "1",
+      "2",
+      "3"
+    ],
+
+    // Should it dynamically create a slot for a VANILLA ITEM THAT HAS A BONE PRESENT BUT NO SLOTS IN IT'S PROPS?
+    "addtoEmptyPropSlots": false,
+
+    // Details for ONE empty prop slot it should be added to
+    "emptyPropSlot": {
+    },
+
+    // Should it be added to static loot containers (e.g., scav bodies)
+    "addtoStaticLootContainers": true,
+
+    // List of containers and the chance it appears in them
+    "staticLootContainers": [
+      {
+        "containerName": "LOOTCONTAINER_SAFE", // ID or short name of container (SEE COMMONLIBS ITEMMAPS)
+        "probability": 4 // percent chance to spawn
+      }
+    ],
+
+    // Should it be added to all secure case filters?
+    "addtoSecureFilters": true,
+
+    // Is this a random loot container? (MUST HAVE RANDOMLOOTCONTAINER "62f109593b54472778797866" AS THIS ITEMS PARENT ID)
+    "isRandomLootContainer": false,
+
+
+
+    // Should it be available in trader offers?
+    "addtoTraders": false,
+
+    // Custom barter/trader settings
+    "traders": {
+      "RAGMAN": {
+        // Offer ID (unique ID - use a mongoID generator for this)
+        "69c6b036b74c2d039e07b264": {
+          // Requirements for buying it at the trader
+          "barterSettings": {
+            "loyalLevel": 1,
+            "unlimitedCount": true,
+            "stackObjectsCount": 1
+          },
+          // What you need to trade for it (roubles for example)
+          "barters": [
+            {
+              "count": 26125,
+              "_tpl": "MONEY_ROUBLES" // Currency ID or short name (SEE SPT'S ITEMTPL CLASS)
+            }
+          ]
+        }
+      }
+    }
+  }
+}

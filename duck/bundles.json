@@ -1,0 +1,9 @@
+{
+  "manifest" : [
+    {
+      "key" : "assets/duck/super_cute_duck.bundle",
+      "dependencyKeys": []
+      
+    }
+  ]
+}
